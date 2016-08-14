@@ -1,0 +1,3 @@
+ToDo
+- Add site-wide metadata (blurb, name, page title)
+- Multiple posts (how to link together?)
