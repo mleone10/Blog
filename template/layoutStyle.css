@@ -1,0 +1,105 @@
+body {
+    margin: 0px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    min-height: 100%;
+}
+
+.l-block {
+    width: 50%;
+    min-width: 600px;
+}
+
+.l-title {
+    text-align: center;
+    background-color: #404040;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.l-title h1 {
+    margin: 15px 0px 7px 0px;
+}
+
+.l-title h3 {
+    margin: 7px 0px 15px 0px;
+}
+
+.l-nav {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: #999999;
+}
+
+.l-nav .l-nav-block {
+    flex: 1;
+    padding: 5px 0px;
+}
+
+.l-nav .l-nav-spacer {
+    height: 0px;
+    padding: 0px;
+}
+
+.l-main {
+    flex: 1;
+    background-color: #cccccc;
+}
+
+.l-post-block {
+    flex: 1;
+    margin: 0px 40px;
+}
+
+.l-post-title h2 {
+    margin-bottom: 0.2em;
+}
+
+.l-post-date p {
+    margin-top: 0.2em;
+    font-size: 0.5em;
+    opacity: 0.5;
+}
+
+.l-post-blurb {
+    margin-bottom: 30px;
+}
+
+.l-post-blurb p {
+    font-style: italic;
+    font-size: 0.9em;
+    opacity: 0.6;
+}
+
+.l-post-main p {
+    text-indent: 2em;
+    text-align: justify;
+}
+
+hr {
+    width: 50%;
+}
+
+@media all and (max-width: 740px) {
+    .l-block {
+        min-width: 100%;
+    }
+
+    .l-nav {
+        flex-direction: column;
+    }
+
+    .l-post-block {
+        margin: 0px 20px;
+    }
+
+    .l-post-main p {
+        text-indent: 1.5em;
+    }
+}
