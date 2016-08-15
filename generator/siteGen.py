@@ -11,14 +11,14 @@ def siteGen():
         dirname(__file__), '..', 'resource', 'template.html'))
 
     # Get all post paths
-    posts = [join(postDir, f) for f in listdir(postDir) if
-        isfile(join(postDir, f)) and
-        f.endswith('.md')]
-
+    posts = dict((f, join(postDir, f)) for f in [f for f in listdir(postDir) if
+        isfile(join(postDir, f)) and f.endswith('.md')])
+    
+    print posts
     # Generate all post pages
-    for p in posts:
+    for name, path in posts.items():
         try:
-            postGen.postGen(metaPath, p, templatePath)
+            postGen.postGen(metaPath, path, templatePath)
         except postLoad.PostFormattingError as err:
             print err
 
