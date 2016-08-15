@@ -28,6 +28,7 @@ body {
 
 .l-title h1 {
     margin: 15px 0px 7px 0px;
+    text-shadow: 0.1em 0.1em 0em #000000;
 }
 
 .l-title h3 {
