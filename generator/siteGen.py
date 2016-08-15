@@ -15,13 +15,18 @@ def siteGen():
         [f for f in listdir(postDir) if
             isfile(join(postDir, f)) and f.endswith('.md')])
     
-    print posts
     # Generate all post pages
     for name, path in posts.items():
         try:
-            postGen.postGen(metaPath, path, templatePath)
+            # Create the HTML for each individual page
+            post = postGen.postGen(metaPath, path, templatePath)
+
+            # Write the post to a file
+
         except postLoad.PostFormattingError as err:
             print err
+
+    return posts
 
 
 if __name__ == '__main__':
