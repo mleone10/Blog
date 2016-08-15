@@ -1,2 +1,2 @@
-# Blog
-Generated static site with minimal HTML/CSS template
+# Vandegraff
+Static blog generator using responsive web design and Python creation scripts.
