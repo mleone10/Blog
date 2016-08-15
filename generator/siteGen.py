@@ -1,5 +1,5 @@
 #!/venv/bin/python
-import postGen, postLoad, os
+import postGen, postLoad, os, shutil
 from os import listdir
 from os.path import isfile, join, abspath, dirname
 
@@ -9,6 +9,10 @@ def siteGen():
         dirname(__file__), '..', 'resource', 'sitemeta.yaml'))
     templatePath = abspath(join(
         dirname(__file__), '..', 'resource', 'template.html'))
+    cssPath = abspath(join(
+        dirname(__file__), '..', 'resource', 'layoutStyle.css'))
+    sitePath = abspath(join(
+        dirname(__file__), '..', 'site'))
 
     # Get all post paths
     posts = dict((f[:-3], join(postDir, f)) for f in 
@@ -22,9 +26,14 @@ def siteGen():
             post = postGen.postGen(metaPath, path, templatePath)
 
             # Write the post to a file
-
+            with open(abspath(join(sitePath, name + '.html')), 'w') as f:
+                f.write(post)
+                f.close()
         except postLoad.PostFormattingError as err:
             print err
+
+    # Copy the stylesheet over to the site directory
+    shutil.copyfile(cssPath, join(sitePath, 'layoutStyle.css'))
 
     return posts
 
