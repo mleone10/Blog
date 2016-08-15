@@ -11,8 +11,9 @@ def siteGen():
         dirname(__file__), '..', 'resource', 'template.html'))
 
     # Get all post paths
-    posts = dict((f, join(postDir, f)) for f in [f for f in listdir(postDir) if
-        isfile(join(postDir, f)) and f.endswith('.md')])
+    posts = dict((f[:-3], join(postDir, f)) for f in 
+        [f for f in listdir(postDir) if
+            isfile(join(postDir, f)) and f.endswith('.md')])
     
     print posts
     # Generate all post pages
