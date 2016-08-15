@@ -18,12 +18,12 @@ def pageGen(metaPath, postPath, templatePath):
 
     # Load parameters
     templateDir = os.path.abspath(os.path.join(
-        os.path.dirname(__file__), '..', 'template'))
+        os.path.dirname(__file__), '..', 'resource'))
     env = Environment(loader = FileSystemLoader(templateDir), trim_blocks=True)
     return env.get_template('template.html').render(params)
 
 
 if __name__ == '__main__':
-    print pageGen('../template/sitemeta.yaml',
+    print pageGen('../resource/sitemeta.yaml',
                   '../posts/testPost.md',
-                  '../template/template.html')
+                  '../resource/template.html')

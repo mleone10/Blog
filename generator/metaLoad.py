@@ -6,4 +6,4 @@ def loadMeta(path):
     return (yaml.load(f.read()))
 
 if __name__ == '__main__':
-    print loadMeta('../template/sitemeta.yaml')
+    print loadMeta('../resource/sitemeta.yaml')
