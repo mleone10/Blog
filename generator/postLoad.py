@@ -16,7 +16,7 @@ def loadPost(path):
 
     with open(path) as f:
         if f.readline() != yamlLeader:
-            raise PostFormattingError(path + 'is incorrectly formatted')
+            raise PostFormattingError('Bad Formatting at: ' + path)
         else:
             line = f.readline()
             while line != yamlLeader:

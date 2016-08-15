@@ -2,3 +2,4 @@ ToDo
 - Add site-wide metadata (blurb, name, page title)
 - Multiple posts (how to link together?)
 - Update readme with environment setup, site gen instructions
+- Lots of filepaths in the Python scripts.  Maybe move them to a props file?

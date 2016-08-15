@@ -2,7 +2,7 @@
 from jinja2 import Environment, FileSystemLoader
 import metaLoad, postLoad, markdown, os
 
-def pageGen(metaPath, postPath, templatePath):
+def postGen(metaPath, postPath, templatePath):
     # Load metadata
     meta = metaLoad.loadMeta(metaPath)
 
@@ -24,6 +24,6 @@ def pageGen(metaPath, postPath, templatePath):
 
 
 if __name__ == '__main__':
-    print pageGen('../resource/sitemeta.yaml',
+    print postGen('../resource/sitemeta.yaml',
                   '../posts/testPost.md',
                   '../resource/template.html')
