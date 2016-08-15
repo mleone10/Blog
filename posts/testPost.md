@@ -1,7 +1,7 @@
 ---
-title: Creating a Static Site Generator
-subtitle: Lessons learned making this website
-date: 13 August 2016
+postTitle: Creating a Static Site Generator
+postBlurb: Lessons learned making this website
+postDate: 13 August 2016
 ---
 Now we can begin the post proper.
 This is a continuation of the previous line, though the markdown is a different

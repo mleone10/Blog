@@ -1,9 +1,9 @@
 #!/venv/bin/python
 import yaml
 
-def metaLoad(path):
+def loadMeta(path):
     f = open(path)
     return (yaml.load(f.read()))
 
 if __name__ == '__main__':
-    print load('../template/sitemeta.yaml')
+    print loadMeta('../template/sitemeta.yaml')
